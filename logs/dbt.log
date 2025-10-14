@@ -1,0 +1,236 @@
+[0m14:58:06.427936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002446E58E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002446FD71BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002446FD71A90>]}
+
+
+============================== 14:58:06.447606 | b8c10de5-1492-401a-8a04-0492e82b77c9 ==============================
+[0m14:58:06.447606 [info ] [MainThread]: Running with dbt=1.8.9
+[0m14:58:06.448526 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init padres-data', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:58:06.915251 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/morri/.dbt')}
+[0m14:58:06.916321 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m14:58:38.225160 [debug] [MainThread]: Starter project path: C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\include\starter_project
+[0m14:58:38.271340 [info ] [MainThread]: 
+Your new dbt project "padres_data_bq" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:58:38.272478 [info ] [MainThread]: Setting up your profile.
+[0m14:59:41.277699 [error] [MainThread]: Encountered an error:
+
+[0m14:59:41.281032 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\cli\main.py", line 470, in init
+    results = task.run()
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 347, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m14:59:41.282637 [debug] [MainThread]: Command `dbt init` failed at 14:59:41.282483 after 95.01 seconds
+[0m14:59:41.283007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002440EA709D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002440E979FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002440E8D5150>]}
+[0m14:59:41.283347 [debug] [MainThread]: Flushing usage events
+[0m14:59:57.860659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000298CC4BE510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000298CDCD1BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000298CDCD1A90>]}
+
+
+============================== 14:59:57.867198 | 9dc0863a-c2af-4c86-acbe-a5b3cda6b5d1 ==============================
+[0m14:59:57.867198 [info ] [MainThread]: Running with dbt=1.8.9
+[0m14:59:57.867975 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init padres-data', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:00:09.156270 [info ] [MainThread]: A project called padres_data_bq already exists here.
+[0m15:00:09.157374 [debug] [MainThread]: Command `dbt init` succeeded at 15:00:09.157238 after 11.44 seconds
+[0m15:00:09.157672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000298CDE7DF30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000298CDF44950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000298CDD45E10>]}
+[0m15:00:09.157951 [debug] [MainThread]: Flushing usage events
+[0m15:01:27.519717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023DEC08E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023DEE851BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023DEE851A90>]}
+
+
+============================== 15:01:27.526322 | 41c21b89-ae31-47ec-b227-6a431eb1026d ==============================
+[0m15:01:27.526322 [info ] [MainThread]: Running with dbt=1.8.9
+[0m15:01:27.527365 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init padres_analytics_bq', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:01:27.543265 [debug] [MainThread]: Starter project path: C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\include\starter_project
+[0m15:01:27.565302 [info ] [MainThread]: 
+Your new dbt project "padres_analytics_bq" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:01:27.566763 [info ] [MainThread]: Setting up your profile.
+[0m15:07:40.828785 [error] [MainThread]: Encountered an error:
+
+[0m15:07:40.831680 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\cli\main.py", line 470, in init
+    results = task.run()
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 347, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 117, in generate_target_from_input
+    target = self.generate_target_from_input(
+        profile_template_local[key][choice], target
+    )
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\task\init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:07:40.833055 [debug] [MainThread]: Command `dbt init` failed at 15:07:40.832931 after 373.47 seconds
+[0m15:07:40.833374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D8CA709D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D8C982210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D8C8D5150>]}
+[0m15:07:40.833717 [debug] [MainThread]: Flushing usage events
+[0m15:08:33.120305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B50848E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B509C91BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B509C91A90>]}
+
+
+============================== 15:08:33.123565 | 65b2c977-0f4e-4e65-b3fb-70a51d9b51ed ==============================
+[0m15:08:33.123565 [info ] [MainThread]: Running with dbt=1.8.9
+[0m15:08:33.124095 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init padres_analytics_bq', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:08:33.132582 [debug] [MainThread]: Starter project path: C:\Users\morri\OneDrive\Desktop\Padres Analytics\.venv\Lib\site-packages\dbt\include\starter_project
+[0m15:08:33.142512 [info ] [MainThread]: 
+Your new dbt project "padres_analytics_bq" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:08:33.143135 [info ] [MainThread]: Setting up your profile.
+[0m15:10:13.583562 [info ] [MainThread]: Profile padres_analytics_bq written to C:\Users\morri\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:10:13.585646 [debug] [MainThread]: Command `dbt init` succeeded at 15:10:13.585402 after 100.67 seconds
+[0m15:10:13.586205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B527CE2EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5292820F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B527D5C8D0>]}
+[0m15:10:13.586876 [debug] [MainThread]: Flushing usage events
+[0m15:44:02.274794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E408E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E6851BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E6851A90>]}
+
+
+============================== 15:44:02.278034 | d6e5b4bc-a94c-49cf-a0cf-0a8549df2a71 ==============================
+[0m15:44:02.278034 [info ] [MainThread]: Running with dbt=1.8.9
+[0m15:44:02.278659 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --select stg_batting_stats', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:44:02.279014 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\morri\OneDrive\Desktop\Padres Analytics\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:44:02.279713 [debug] [MainThread]: Command `dbt run` failed at 15:44:02.279627 after 0.14 seconds
+[0m15:44:02.279945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E6A05F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E68D84D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209E68C6140>]}
+[0m15:44:02.280151 [debug] [MainThread]: Flushing usage events
+[0m15:24:16.099405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2C6A8E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2CB351BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2CB351A90>]}
+
+
+============================== 15:24:16.131044 | c13816ab-c5f7-408d-acec-aaba53e2b350 ==============================
+[0m15:24:16.131044 [info ] [MainThread]: Running with dbt=1.8.9
+[0m15:24:16.132859 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select marts', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:24:16.134230 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\morri\OneDrive\Desktop\Padres Analytics\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:24:16.136119 [debug] [MainThread]: Command `dbt run` failed at 15:24:16.135862 after 0.28 seconds
+[0m15:24:16.137658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2CB505F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2CB3D84D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2CB3C6140>]}
+[0m15:24:16.138834 [debug] [MainThread]: Flushing usage events
+[0m16:52:50.227799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002903748E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029039C51BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029039C51A90>]}
+
+
+============================== 16:52:50.238370 | 1c48960b-bad9-4691-933e-3c5ba93ce6e5 ==============================
+[0m16:52:50.238370 [info ] [MainThread]: Running with dbt=1.8.9
+[0m16:52:50.240462 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run --select staging', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:52:50.243138 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\morri\OneDrive\Desktop\Padres Analytics\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:52:50.245329 [debug] [MainThread]: Command `dbt run` failed at 16:52:50.245043 after 0.31 seconds
+[0m16:52:50.246023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029039E05F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029039CD84D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029039CC6140>]}
+[0m16:52:50.246683 [debug] [MainThread]: Flushing usage events
+[0m17:54:17.351141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D66578E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D667F51BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D667F51A90>]}
+
+
+============================== 17:54:17.362249 | 0812cbff-ee8c-457a-a346-439d475cc582 ==============================
+[0m17:54:17.362249 [info ] [MainThread]: Running with dbt=1.8.9
+[0m17:54:17.364839 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --select marts', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:54:17.366630 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\morri\OneDrive\Desktop\Padres Analytics\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:54:17.369314 [debug] [MainThread]: Command `dbt run` failed at 17:54:17.368989 after 0.39 seconds
+[0m17:54:17.370586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D669105F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D667FD84D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D667FCA140>]}
+[0m17:54:17.371904 [debug] [MainThread]: Flushing usage events
+[0m07:41:14.249348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D429ADE510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D42E351BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D42E351A90>]}
+
+
+============================== 07:41:14.254093 | c1ea8ff0-de59-4ca9-b766-e910f3e80808 ==============================
+[0m07:41:14.254093 [info ] [MainThread]: Running with dbt=1.8.9
+[0m07:41:14.254988 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\morri\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:41:14.255323 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\morri\OneDrive\Desktop\Padres Analytics\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:41:14.255906 [debug] [MainThread]: Command `dbt run` failed at 07:41:14.255826 after 0.15 seconds
+[0m07:41:14.256130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D42E505F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D42E3D84D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D42E3C6140>]}
+[0m07:41:14.256343 [debug] [MainThread]: Flushing usage events

@@ -1,0 +1,190 @@
+version: 2
+models:
+  - name: mart_player_season_batting
+    description: "batting; per player per season"
+    columns:
+      - name: player_name
+        tests: [not_null]
+      - name: season_year
+        tests: [not_null]
+      - name: position
+        tests: [not_null]
+      - name: plate_appearances
+        tests: 
+          - not_null
+          - positive_inter_or_zero
+      - name: at_bats
+        tests: 
+          - not_null
+          - positive_inter_or_zero
+      - name: hits
+        tests: 
+          - not_null
+          - positive_inter_or_zero
+      - name: home_runs
+        tests: 
+          - not_null
+          - positive_inter_or_zero
+      - name: rbi
+        tests: 
+          - not_null
+          - positive_inter_or_zero
+      - name: batting_avg
+        tests: 
+          - not_null
+          - between_0_and_1
+      - name: obp
+        tests: 
+          - not_null
+          - between_0_and_1
+      - name: slg
+        tests: 
+          - not_null
+          - between_0_and_1
+      - name: ops
+        tests: 
+          - not_null
+          - between_0_and_1
+      - name: ops_plus
+        tests: 
+          - not_null
+          - between_0_and_1
+      - name: total_bases
+        tests: 
+          - not_null
+          - positive_inter_or_zero
+  - name: mart_player_season_pitching
+    description: "pitching, per pitcher per season" 
+    columns:
+      - name: player_id
+        tests: [not_null]
+      - name: season_year
+        tests: [not_null]
+      - name: player_name
+        tests: [not_null]
+      - name: shutouts
+        tests: 
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 100
+      - name: saves
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1000
+      - name: innings_pitched
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1500
+      - name: hits_allowed
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1000
+      - name: runs_allowed
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1000              
+      - name: earned_runs
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1000
+      - name: home_runs_allowed
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1000
+      - name: walks_allowed
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1000
+      - name: intentional_walks_allowed
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1000
+      - name: strikeouts
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 500          
+      - name: hit_by_pitch
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 100 
+      - name: balks
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 10
+      - name: wild_pitches
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 100
+      - name: batters_faced
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 1500
+      - name: fielding_independent_pitching
+        tests:
+          - not_null
+          - between_min_max:
+              min: -10
+              max: 500
+      - name: walks_hits_per_inning_pitched
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 25
+      - name: hits_per_nine_innings
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 100
+      - name: homeruns_per_nine_innings
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 20
+      - name: walks_per_nine_innings
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 250
+      - name: strikeouts_per_nine_innings
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 50
+      - name: strikeout_walk_ratio
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 25                                                         

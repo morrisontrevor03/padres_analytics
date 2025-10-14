@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: padres_raw
+    database: padres-data
+    schema: padres_raw
+    tables:
+      - name: batting
+      - name: pitching
