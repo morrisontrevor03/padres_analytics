@@ -7,3 +7,4 @@ sources:
     tables:
       - name: batting
       - name: pitching
+      - name: team

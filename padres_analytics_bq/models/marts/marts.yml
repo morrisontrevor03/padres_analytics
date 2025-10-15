@@ -187,4 +187,48 @@ models:
           - not_null
           - between_min_max:
               min: 0
-              max: 25                                                         
+              max: 25  
+  - name: mart_games
+    description: "basic team stats from 1963-2023" 
+    columns:
+      - name: year_id
+        tests:
+          - not_null
+          - between_min_max:
+              min: 1963
+              max: 2100
+          - unique
+      - name: rank
+        tests:
+          - not_null
+          - positive_inter_or_zero
+      - name: games_played
+        tests:
+          - not_null
+          - between_min_max:
+              min: 60
+              max: 180
+      - name: wins
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 180
+      - name: losses
+        tests:
+          - not_null
+          - between_min_max:
+              min: 0
+              max: 180
+      - name: runs_scored
+        tests:
+          - not_null
+          - between_min_max:
+              min: 1
+              max: 1067
+      - name: division_win
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+              quote: false
