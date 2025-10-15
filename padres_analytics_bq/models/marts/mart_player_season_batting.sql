@@ -20,3 +20,5 @@ SELECT
     ops_plus,
     total_bases,
 FROM {{ref('stg_batting_stats')}}
+WHERE
+    season_year >= 1969 and season_year < 2100

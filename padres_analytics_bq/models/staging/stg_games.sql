@@ -1,7 +1,7 @@
 {{config(materialized='view')}}
 
 SELECT
-    yearId as year_id,
+    yearId as season_year,
     Rank as rank,
     G as games_played,
     W as wins,

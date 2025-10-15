@@ -3,7 +3,7 @@
 )}}
 
 SELECT 
-    year_id,
+    season_year,
     rank,
     games_played,
     wins,
@@ -12,4 +12,4 @@ SELECT
     division_win
 FROM {{ref('stg_games')}}
 WHERE
-    year_id >= 1963 and year_id < 2100
+    season_year >= 1969 and season_year < 2100

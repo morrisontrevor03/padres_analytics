@@ -30,3 +30,5 @@ SELECT
     strikeouts_per_nine_innings,
     strikeout_walk_ratio
 FROM {{ref('stg_pitching_stats')}}
+WHERE
+    season_year >= 1969 and season_year < 2100
