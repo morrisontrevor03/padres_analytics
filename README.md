@@ -4,6 +4,10 @@
 
 The goal of this project is to take data from multiple sources and make it available for answering key business questions and creating vizualisations. The data provides a wealth of information pertaining to the San Diego Padres from 1969-2023. The data focuses on more of a macro view of the health of the team, allowing for analysis of trends throughout their history rather than focusing on individual games or innings. 
 
+## Vizualizations
+https://public.tableau.com/app/profile/trevor.morrison/viz/PadresAnalytics/CorrelationAnalysis?publish=yes
+https://public.tableau.com/app/profile/trevor.morrison/viz/PadresAnalytics/HistoricalData?publish=yes
+
 ## Data Sources
 Padres pitching and batting data: https://www.kaggle.com/datasets/mattop/san-diego-padres-batting-and-pitching-1969-2023
 Big picture data (wins, losses, etc): https://www.kaggle.com/datasets/dalyas/lahman-baseball-database
