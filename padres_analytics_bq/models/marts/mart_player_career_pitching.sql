@@ -29,6 +29,6 @@ SELECT
     SAFE_DIVIDE(SUM(strikeouts), SUM(walks_allowed)) AS career_strikeout_walk_ratio
 FROM {{ref('stg_pitching_stats')}}
 WHERE
-    season_year >= 1969 and season_year < 2100
+    (season_year >= 1969 and season_year < 2100) AND (batters_faced > 100)
 GROUP BY
     player_name
